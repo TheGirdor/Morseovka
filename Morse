@@ -1,0 +1,70 @@
+#include <windows.h>
+#include <iostream>
+
+
+using namespace std;
+void carka()
+{
+     Beep(500,500);
+     Sleep(80);
+}
+void tecka()
+{
+     Beep(500,250);
+     Sleep(80);
+}
+int main()
+{
+   int delka,i;
+   char text[100];
+   cout << "Zadej text s maximalnim mnozstvim 100 malych znaku bez diakritiky: " ;
+   cin.getline(text,100);
+   delka=strlen(text);
+   for (i=0;i<delka;i++)         
+{
+   if      (text[i]=='a') { cout << "A = .-";   tecka();carka();}   
+   else if (text[i]=='b') { cout << "B = -..."; carka();tecka();tecka();tecka(); }  
+   else if (text[i]=='c') { cout << "C = -.-."; carka();tecka();carka(); }  
+   else if (text[i]=='d') { cout << "D = -..";  carka();tecka();tecka(); }
+   else if (text[i]=='e') { cout << "E = .";    tecka(); }
+   else if (text[i]=='f') { cout << "F = ..-."; tecka();tecka();carka();tecka(); }
+   else if (text[i]=='g') { cout << "G = --.";  carka();carka();tecka(); }
+   else if (text[i]=='h') { cout << "H = ...."; tecka();tecka();tecka();tecka(); }
+   else if (text[i]=='i') { cout << "I = ..";   tecka();tecka(); }
+   else if (text[i]=='j') { cout << "J = .---"; tecka();carka();carka();carka(); }
+   else if (text[i]=='k') { cout << "K = -.-";  carka();tecka();carka();     }                
+   else if (text[i]=='l') { cout << "L = .-.."; tecka();carka();tecka();tecka(); }
+   else if (text[i]=='m') { cout << "M = --";   carka();carka(); }
+   else if (text[i]=='n') { cout << "N = -.";   carka();tecka(); }
+   else if (text[i]=='o') { cout << "O = ---";  carka();carka();carka(); }
+   else if (text[i]=='p') { cout << "P = .--."; tecka();carka();carka();tecka(); }
+   else if (text[i]=='q') { cout << "Q = --.-"; carka();carka();tecka();carka(); }
+   else if (text[i]=='r') { cout << "R = .-.";  tecka();carka();tecka(); }
+   else if (text[i]=='s') { cout << "S = ...";  tecka();tecka();tecka(); }
+   else if (text[i]=='t') { cout << "T = -";    carka(); }
+   else if (text[i]=='u') { cout << "U = ..-";  tecka();tecka();carka(); }
+   else if (text[i]=='v') { cout << "V = ...-"; tecka();tecka();tecka(); }
+   else if (text[i]=='w') { cout << "W = .--";  tecka();carka();carka(); }
+   else if (text[i]=='x') { cout << "X = -..-"; carka();tecka();tecka();carka(); }
+   else if (text[i]=='y') { cout << "Y = -.--"; carka();tecka();carka();carka(); }
+   else if (text[i]=='z') { cout << "Z = --.."; carka();carka();tecka();tecka(); }
+   else if (text[i]=='1') { cout << "1 = .----";tecka();carka();carka();carka();carka();  }
+   else if (text[i]=='2') { cout << "2 = ..---";tecka();tecka();carka();carka();carka();  }
+   else if (text[i]=='3') { cout << "3 = ...--";tecka();tecka();tecka();carka();carka();  }
+   else if (text[i]=='4') { cout << "4 = ....-";tecka();tecka();tecka();tecka();carka();  }
+   else if (text[i]=='5') { cout << "5 = .....";tecka();tecka();tecka();tecka();tecka();  }
+   else if (text[i]=='6') { cout << "6 = -....";carka();tecka();tecka();tecka();tecka();  }
+   else if (text[i]=='7') { cout << "7 = --...";carka();carka();tecka();tecka();tecka();  }
+   else if (text[i]=='8') { cout << "8 = ---..";carka();carka();carka();tecka();tecka();  }
+   else if (text[i]=='9') { cout << "9 = ----.";carka();carka();carka();carka();tecka();  }
+   else if (text[i]=='0') { cout << "0 = -----";carka();carka();carka();carka();carka();  }
+   else if (text[i]==' ')   Sleep(50);
+   else
+   cout <<"neznamy znak";
+   cout << endl;
+   Sleep(100);
+}         
+
+system("PAUSE > NUL");
+return 0;
+}
